@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function validationForm(){
+            var X =document.forms["myForms"]["username","password"].value;
+            if(x==""){
+                alert("Please fill all the details !!!!!!");
+                return false;
+            }
+        }
+    </script>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        
+        .flexcontainer{
+            height: 800px;
+            width: 600px;
+            display: flex;
+            background-color: cornflowerblue;
+            background-repeat: no-repeat;
+            border: 2px solid black;
+            background-size: cover;
+            
+
+        }
+        .loginflex{
+            width: 500px;
+            height: 600px;
+            background-color: seagreen;
+            margin: auto;
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 10%;
+            color: black;
+        }
+        .login form{
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flexcontainer">
+        <div class="loginflex">
+            <h3>LoginForm</h3>
+
+            <form name="login">
+                username:<input type="text" id="username" name="uname" value=""><br/><br/>
+                
+                password:<input type="password" id="password" name="pwd" value=""><br/><br/>
+                 
+                <input type="button" name="btn" value="Submit" onclick="validation"()>
+
+            </form>
+        </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+    function validation(){
+        var uname = document.getElementById("username").value;
+        var pwd = document.getElementById("password").value;
+
+        if(uname=="||pwd=='')
+        {
+            alert("please enter username and password");
+        }
+        elseif(uname.length<3||uname.lenght>12)
+        {
+            alert("username must be 3 to 12 characters");
+        }
+        elseif(pwd.lenght<5||pwd.lenght>12)
+        {
+            alert("password must be 5 to 12");
+        }
+        else{
+            alert("Thank you for login");
+        }
+    }
+    </script>
+</body>
+</html>
